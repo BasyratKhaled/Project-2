@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #d0f0c0, #c0eafc);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #2e7d32;
+            margin-bottom: 30px;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: #ffffffcc;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.5s, box-shadow 0.5s;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .course-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        }
+
+        .course-card h2 {
+            color: #0288d1;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .course-card span {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #2e7d32;
+        }
+ 
+.learn-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00aaff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.learn-btn:hover {
+    background: #57d169;
+    transform: scale(1.05);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Most Popular Courses</h1>
+        <div class="courses-grid">
+            <div class="course-card">
+                <h2>Web Development</h2>
+                <p>Learn to create modern, responsive websites and web applications using HTML, CSS, JavaScript, and frameworks.
+                    
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+           <a href="/courses/web development.html" class="learn-btn">Learn More</a>
+                 
+            </div>
+            <div class="course-card">
+                <h2>Graphic Design</h2>
+                <p>Master Adobe Photoshop, Illustrator, and modern design principles to create stunning visuals.</p>
+                             <br>
+                             <br>
+                             <br>
+                              <br>
+            
+                            
+           <a href="/courses/graphic.html" class="learn-btn">Learn More</a>
+                   
+            </div>
+            <div class="course-card">
+                <h2>Sales and lead generation</h2>
+                <p>Attract high-quality leads through targeted campaigns designed to convert interested audiences into lifelong learners.</p>
+                 <br>
+                 <br>
+           <a href="/courses/sales.html" class="learn-btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h2>Digital Marketing and freelancing</h2>
+                <p>Learn SEO, social media marketing, email marketing, and strategies to grow online businesses.
+<br>
+<br>
+<br>
+<br>
+           <a href="/courses/digitalmarketing.html" class="learn-btn">Learn More</a>
+</p>
+           
+          
+            </div>
+            <div class="course-card">
+                <h2>Content Writing</h2>
+                <p>Craft compelling and engaging content that communicates your message effectively and captivates your audience.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+           <a href="/courses/creativewrit.html" class="learn-btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h2>Cyber-security Fundamentals </h2>
+                <p>Learn the essential concepts of protecting systems, networks, and data from digital threats and attacks.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br> 
+                <br>
+                <br>
+                <br>
+           <a href="/courses/cyb.html" class="learn-btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h2>Amazon virtual Assistant </h2>
+                <p>Helps sellers manage their online stores by handling product research, listing optimization, inventory tracking, and customer support.</p>
+               <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+           <a href="/courses/amazon.html" class="learn-btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h2>E-commerce development</h2>
+                <p>Build powerful and scalable e-commerce stores designed to boost sales and deliver a seamless shopping experience..</p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+           <a href="/courses/ecom.html" class="learn-btn">Learn More</a>
+            </div>
+        
+            <div class="course-card">
+                <h2>Computer and information technology</h2>
+                <p>Empowering users with modern computer and IT solutions that enhance productivity, connectivity, and digital efficiency.</p>
+                  <br>
+           <a href="/courses/cit.html" class="learn-btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h2>Video editing and animation</h2>
+                <p>Bring your ideas to life with professional video editing and stunning animations that captivate your audience.</p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+           <a href="/courses/vid.html" class="learn-btn">Learn More</a>
+            </div>
+           
+        
+            
+            <div class="course-card">
+                <h2>Python programming</h2>
+                <p>Master one of the most powerful and beginner-friendly programming languages used in web development, automation, AI, and more.</p>
+                <br>
+           <a href="/courses/python.html" class="learn-btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h2>UI/UX designing</h2>
+                <p>Visually appealing and user-friendly interfaces that offer a smooth, intuitive, and engaging experience.</p>
+                  <br>
+                   <br>
+                  <br>
+                  <br>
+           <a href="/courses/uiux.html" class="learn-btn">Learn More</a>
+            </div>
+           
+            <div class="course-card">
+                <h2>Backend devolpment</h2>
+                <p>Build powerful and secure server-side systems that handle data, logic, and performance behind every application.</p>
+               <br>
+           <a href="/courses/bck.html" class="learn-btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h2>Frontened development</h2>
+                <p>Design interactive and visually appealing interfaces that deliver a seamless user experience across devices.</p>
+                  <br>
+                  <br>
+           <a href="/courses/front.html" class="learn-btn">Learn More</a>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script>
+        // Scroll animation for course cards
+        const courseCards = document.querySelectorAll('.course-card');
+
+        const revealCourses = () => {
+            const triggerBottom = window.innerHeight / 1.2;
+            courseCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                if(cardTop < triggerBottom){
+                    card.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealCourses);
+        window.addEventListener('load', revealCourses);
+    </script>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Courses</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+    body { background: linear-gradient(to right, #d0f0c0, #c0eafc); color:#333;}
+    .container { max-width: 1200px; margin:0 auto; padding:50px 20px; }
+    h1 { text-align:center; font-size:3em; color:#2e7d32; margin-bottom:30px;}
+    .courses-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px;}
+    .course-card { background:#ffffffcc; border-radius:15px; padding:20px; box-shadow:0 10px 20px rgba(0,0,0,0.1); transition:transform 0.5s, box-shadow 0.5s; opacity:0; transform:translateY(50px); }
+    .course-card.visible { opacity:1; transform:translateY(0);}
+    .course-card:hover { transform:translateY(-10px); box-shadow:0 15px 25px rgba(0,0,0,0.2);}
+    .course-card h2 { color:#0288d1; margin-bottom:10px;}
+    .course-card p { font-size:0.95em; line-height:1.5; color:#333; }
+    .course-card span { display:inline-block; margin-top:10px; font-weight:600; color:#2e7d32;}
+    .learn-more { margin-top:15px; display:inline-block; padding:8px 15px; background:#2e7d32; color:#fff; border:none; border-radius:8px; cursor:pointer; transition:background 0.3s; }
+    .learn-more:hover { background:#1b5e20;}
+    
+    /* Modal Styles */
+    .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; }
+    .close-btn { position:absolute; top:15px; right:20px; font-size:1.5em; font-weight:bold; color:#333; cursor:pointer;}
+    .modal-content h2 { color:#0288d1; margin-bottom:15px;}
+    .modal-content p { line-height:1.6; color:#333;}
+</style>
+</head>
+<body>
+   
