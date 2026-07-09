@@ -1,0 +1,209 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #d0f0c0, #c0eafc);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #2e7d32;
+        }
+
+        h2 {
+            color: #0288d1;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
+
+        .section.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background: #e0f7fa;
+            border-radius: 10px;
+            flex: 1 1 200px;
+            transition: transform 0.5s;
+        }
+
+        .stat:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat h3 {
+            font-size: 2em;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.5s, box-shadow 0.5s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Smooth fade in animations for scrolling */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .view-more .btn {
+    display: center;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #4dd0e1;    /* light blue */
+    color: #004d40;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.view-more .btn:hover {
+    background: #a5d6a7;    /* light green */
+    color: #00332f;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+
+        <div class="section" id="goal">
+            <h2>Our Goal</h2>
+            <p> The goal of Bano Qabil Pakistan is to empower youth through education and skill development. This initiative focuses on enhancing youths participation in various sectors, promoting skills, and fostering economic independence.world-class education and skill development for students, empowering them to excel in their careers and personal growth.</p>
+        </div>
+
+        <div class="section" id="chief">
+            <h2>Patron-in-Chief Bano Qabil Pakistan </h2>
+            <p>Our chief, <strong> Hafiz Naeem ur Rehman</strong>, leads Bano Qabil with a vision for innovation, excellence, and a student-focused approach.</p>
+        </div>
+
+        <div class="section" id="campuses">
+            <h2>Our Campuses</h2>
+            <p>We have multiple campuses located in many cities, providing accessible education and modern facilities to our students.</p>
+        </div>
+
+        <div class="section" id="stats">
+            <h2>Statistics</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>1150k+</h3>
+                    <p>Total Students</p>
+                </div>
+                <div class="stat">
+                    <h3>20+</h3>
+                    <p>Total Courses</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="./images/pic1.jpg" alt="Gallery Image">
+                <img src="./images/pic2.jpg" alt="Gallery Image">
+                <img src="./images/pic3.jpg" alt="Gallery Image">
+                <img src="./images/pic4.jpg" alt="Gallery Image">
+                <img src="./images/pic7.jpg" alt="Gallery Image">
+                <img src="./images/pic5.jpg" alt="Gallery Image">
+                <img src="./images/pic6.jpg" alt="Gallery Image">
+                 <img src="./images/pic8.jpg" alt="Gallery Image">
+                 
+         <div class="view-more">
+                     <a href="/banoqabil/gallerey.html" class="btn">View More</a></div>
+        
+    </div>
+           
+        </div>
+       
+    </div>
+
+    <script>
+        // Scroll animation for sections
+        const sections = document.querySelectorAll('.section');
+
+        const revealSection = () => {
+            const triggerBottom = window.innerHeight / 1.2;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if(sectionTop < triggerBottom){
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealSection);
+        window.addEventListener('load', revealSection);
+    </script>
+</body>
+</html>
+
+</body>
+</html>
