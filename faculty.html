@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <h1 class="main-title"> Faculty Members</h1>
+
+    <section class="faculty-section">
+
+        <!-- Member 1 -->
+        <div class="faculty-box fade-scroll">
+            <div class="faculty-img">
+                <img src="./images/sir omer.jpg" alt="">
+            </div>
+            <div class="faculty-info">
+                <h2> MUHAMMAD UMAR SAJID
+</h2>
+                <h4>Business Development Officer and Developer
+</h4>
+                <p>
+                 Expert in modern web technologies, delivering clear, practical, and engaging learning experiences.Working at Bano Qabil Sahiwal as an instructor of Web development.
+                </p>
+            </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="faculty-box fade-scroll">
+            <div class="faculty-info">
+                <h2>SOMA ARSHAD </h2>
+                <h4>Graphic Design Illustrator and Visual Arts </h4>
+                <p>
+            Skilled Illustrator & 2D Artist,
+
+Specialized in digital illustration & modern design trends,
+ Experienced Visual Artist with unique storytelling style and
+Graphic design Instructor at Bano Qabil Institute Sahiwal      </p>
+            </div>
+            <div class="faculty-img">
+                <img src="./images/pic12.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="faculty-box fade-scroll">
+            <div class="faculty-img">
+                <img src="./images/sirtalha.jpg" alt="">
+            </div>
+            <div class="faculty-info">
+                <h2>MUHAMMAD TALHA SALEEM</h2>
+                <h4>Digital Marketing Instructor </h4>
+                <p>
+                    Expert in Digital Marketing, helping students master modern marketing tools and strategies.He teach digital marketing to students with a focus on creativity, strategy, and real-world results.
+                </p>
+            </div>
+        </div>
+
+        <!-- ⭐ NEW MEMBER 4 -->
+        <div class="faculty-box fade-scroll">
+            <div class="faculty-info">
+                <h2> MARYAM SALEEM</h2>
+                <h4>Essential of Computing Instructor </h4>
+                <p>
+Essentials of Computing Instructor dedicated to helping students understand the foundations of computers, technology, and digital skills.
+                </p>
+            </div>
+            <div class="faculty-img">
+                <img src="./images/pic11.jpg" alt="">
+            </div>
+        </div>
+
+    </section>
+
+<script src="script.js"></script>
+</body>
+</html>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #067f87; /* Light green shade */
+}
+
+/* Page Title */
+.main-title {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 38px;
+    color: #333;
+}
+
+/* Faculty Section Container */
+.faculty-section {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Each Faculty Box */
+.faculty-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    background: rgb(207, 243, 221);
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+/* Image Section */
+.faculty-img img {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Text Section */
+.faculty-info {
+    flex: 1;
+}
+
+.faculty-info h2 {
+    font-size: 30px;
+    color: #007b7a;
+}
+
+.faculty-info h4 {
+    color: #0090b8;
+    margin: 8px 0 15px;
+}
+
+.faculty-info p {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Animation when visible */
+
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+/* Responsive */
+@media (max-width: 850px) {
+    .faculty-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .faculty-img img {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+</style>
+<script>
+    // Scroll reveal effect
+const elements = document.querySelectorAll(".fade-scroll");
+
+function reveal() {
+    elements.forEach((el) => {
+        const position = el.getBoundingClientRect().top;
+        const screenPos = window.innerHeight - 150;
+
+        if (position < screenPos) {
+            el.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
+
+</script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Scroll Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
