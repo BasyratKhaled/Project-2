@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<div class="signup-bg">
+
+    <div class="signup-box">
+        <h2>Create Your Account</h2>
+
+        <form id="signupForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+
+            <button type="submit" class="btn">Sign Up</button>
+
+            <p class="login-text">Already have an account?
+                <a href="/banoqabil/login.html" class="login-link">Login</a>
+            </p>
+
+        </form>
+    </div>
+
+</div>
+
+<script src="signup.js"></script>
+
+</body>
+</html>
+<style>
+
+  /* Full page background */
+.signup-bg {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #0b8dfd, #0fd186);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Signup box */
+.signup-box {
+    width: 400px;
+    background: #ffffffdd;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.signup-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #065f8f;
+}
+
+/* Input fields */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #065f8f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #0b8dfd;
+    margin-top: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+}
+
+input:focus {
+    border-color: #0fd186;
+    box-shadow: 0 0 8px #0fd186;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(120deg, #0b8dfd, #0fd186);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Login link */
+.login-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link {
+    color: #0b8dfd;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+
+</style>
+<script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let pass = document.getElementById("signupPassword").value;
+    let confirm = document.getElementById("signupConfirm").value;
+
+    if(pass !== confirm) {
+        alert("❗ Passwords do not match!");
+        return;
+    }
+
+    alert("🎉 Signup Successful!");
+    document.getElementById("signupForm").reset();
+});
+
+</script>
+</body>
+</html>
