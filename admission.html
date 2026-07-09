@@ -1,0 +1,233 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="form-container">
+    <h2> Registration Form</h2>
+
+    <form id="admissionForm">
+
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" required>
+        </div>
+ <div class="input-group">
+            <label>CNIC No.</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="input-group">
+            <label>Whatsapp Number</label>
+            <input type="text" id="phone" required>
+        </div>
+
+        <div class="input-group">
+            <label>Select Course</label>
+            <select id="course" required>
+                <option value="">-- Choose a Course --</option>
+                 <option>Web Development</option>
+                <option>Graphic Designing</option>
+                <option>App Development</option>
+                <option>Cyber Security fundamentals</option>
+                 <option>Digital Marketing</option>
+                  <option>E-commerce Development</option>
+                  <option>Backend Development</option>
+                  <option>Basic of Data science</option>
+                   <option>Amazon virtual Assistant</option>
+                    <option>Computer and Information technology </option>
+                     <option>Video editing and animation</option>
+        
+                      <option>Frontend devlopment</option>
+                      <option>UI/UX Designing </option>
+                      <option>Python Programming</option>
+                       <option>Creative Writing</option>
+                       <option>Cloud Computing</option>
+                        <option>Amazon PL</option>
+            </select>
+        </div>
+
+        <form id="admissionForm">
+
+
+   
+
+    <div class="input-group">
+        <label>Age</label>
+        <input type="number" id="age" min="10" max="80" required>
+    </div>
+
+    <div class="input-group">
+        <label>City</label>
+        <input type="text" id="city" required>
+    </div>
+
+    <div class="input-group">
+        <label>Education</label>
+        <select id="education" required>
+            <option value="">-- Select Education --</option>
+            <option>Matric</option>
+            <option>Intermediate</option>
+            <option>Diploma</option>
+            <option>BS / Graduation</option>
+            <option>Masters</option>
+        </select>
+    </div>
+
+
+    <div class="input-group">
+        <label>Address</label>
+        <textarea id="address" required></textarea>
+    </div>
+
+    <button type="submit" class="btn">Submit Form</button>
+</form>
+
+
+<script src="script.js"></script>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0b8dfd, #0fd186);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 400px;
+    padding: 25px;
+    background: #ffffffdd;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #065f8f;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #065f8f;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #0b8dfd;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0fd186;
+    box-shadow: 0px 0px 8px #0fd186;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(120deg, #0b8dfd, #0fd186);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.form-container {
+    
+   width: 400px;
+    padding: 30px;
+    background: #ffffffdd;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+    max-height: 90vh;
+    overflow-y: auto;
+   
+}
+
+
+/* Light Blue Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #d6ecff;   /* very light blue */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0b8dfd;   /* main blue */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #066cc4;
+}
+
+
+</style>
+<script>
+
+
+document.getElementById("admissionForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    alert("🎉 Your Admission Form has been submitted successfully!");
+
+    document.getElementById("admissionForm").reset();
+});
+
+</script>
+</body>
+</html>
