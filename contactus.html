@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #067f87; /* light green */
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px;
+        }
+
+        /* MAP AREA */
+        .map-box {
+            width: 450px;
+            height: 420px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            animation: slideLeft 1.2s ease;
+        }
+
+        @keyframes slideLeft {
+            from { transform: translateX(-70px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* CONTACT FORM */
+        .form-box {
+            width: 380px;
+        background: linear-gradient(to right, #d0f0c0, #c0eafc);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            animation: slideRight 1.2s ease;
+        }
+
+        @keyframes slideRight {
+            from { transform: translateX(70px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #005f5f;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #045d5d;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: none;
+            height: 110px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background: #00a2ff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0086d1;
+        }
+
+        .success-msg {
+            display: none;
+            margin-top: 15px;
+            text-align: center;
+            color: #075e0c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- MAP ON LEFT -->
+    <div class="map-box">
+        <iframe 
+            width="100%" 
+            height="100%" 
+            style="border:0" 
+            loading="lazy"
+            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.400460596722!2d73.1074139742631!3d30.679006888229523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c18b486015cd55%3A0x267a3d9f176cca4!2sBano%20Qabil%20Sahiwal!5e0!3m2!1sen!2s!4v1765025808671!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- CONTACT FORM ON RIGHT -->
+    <div class="form-box">
+        <h2>Contact Us</h2>
+
+        <div class="input-group">
+            <label>Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+
+        <div class="input-group">
+            <label>Message</label>
+            <textarea id="message" placeholder="Write your message..."></textarea>
+        </div>
+
+        <button onclick="sendMsg()">Send Message</button>
+
+        <p class="success-msg" id="success">Message Sent Successfully ✔</p>
+    </div>
+
+</div>
+
+<script>
+    function sendMsg() {
+        document.getElementById("success").style.display = "block";
+
+        setTimeout(() => {
+            document.getElementById("success").style.display = "none";
+        }, 2500);
+    }
+</script>
+
+</body>
+</html>
