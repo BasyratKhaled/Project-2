@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hero {
+            height: 90vh;
+            background: url("./images/poster2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        /* HEADER STYLING */
+        header {
+            width: 90%;
+            height: 80px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #7ce8c1, #6dbced);
+            border-radius: 60px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #004d4d;
+            font-size: 30px;
+            font-weight: bold;
+
+
+        }
+
+
+        .logo img {
+            height: 90px;
+            width: auto;
+        }
+
+        nav {
+            color: rgb(18, 24, 140);
+        }
+
+        .navbar {
+            width: 90%;
+            margin: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .nav-links li a:hover {
+            color: #eafffb;
+            text-shadow: 0 0 8px white;
+        }
+
+        /* Login button style */
+        .login-btn {
+            padding: 8px 16px;
+            background: rgb(170, 243, 190);
+            color: #0b8dfd;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .login-btn:hover {
+            background: #f695ca;
+            transform: scale(1.05);
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .course-card {
+            background: linear-gradient(135deg, #7ce8c1, #6dbced);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            text-align: left;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(132, 250, 176, 0.3);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .course-card h3 {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background: var(--primary-grad);
+            border: none;
+            border-radius: 50px;
+            color: rgb(114, 41, 41);
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(143, 21, 21, 0.15);
+        }
+
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-grad: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            --secondary-grad: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+            --text-dark: #f6f6f9;
+            --text-light: #c95656;
+            --accent-green: #4facfe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            overflow-x: hidden;
+            background-color: #3ec1c1;
+        }
+
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 4px;
+            background: var(--primary-grad);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background: var(--primary-grad);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery {
+            background: #3ec1c1;
+            padding: 60px;
+            animation: fadeIn 2s;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.07);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact {
+            padding: 60px;
+            background: #3ec1c1;
+        }
+
+        .contact-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-info {
+            width: 350px;
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: slideUp 2s;
+        }
+
+        .contact-info h2 {
+            color: #067f87;
+            font-family: 'Playfair Display';
+            margin-bottom: 15px;
+        }
+
+        iframe {
+            width: 400px;
+            height: 300px;
+            border: 0;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+            animation: fadeIn 2s;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #c4f7c9, #b6e5ff);
+            /* light green + light blue */
+            padding: 40px 0 20px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .footer-container {
+            width: 95%;
+            margin: 35px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-section h3,
+        .footer-section h4 {
+            color: #034f84;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .footer-section p,
+        .footer-section ul li a {
+            color: #00334e;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            margin-left: 5px;
+            color: #02657a;
+            font-weight: 600;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-bottom p {
+            color: #00334e;
+            font-size: 14px;
+        }
+
+        /* Smooth Fade Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="./images/logo-removebg-preview.png">
+                <div class="logo"> </div>
+
+            </div>
+
+
+
+
+            <ul class="nav-links">
+                <li><a href="/banoqabil/index.html">Home</a></li>
+                <li><a href="/banoqabil/about.html">About</a></li>
+                <li><a href="/banoqabil/courses.html">Courses</a></li>
+
+                <li><a href="/banoqabil/events.html">Process</a></li>
+                <li><a href="/banoqabil/admission.html">Registration</a></li>
+                <li><a href="/banoqabil/contactus.html">Contact</a></li>
+                <li><a href="/banoqabil/faculty.html">Faculty</a></li>
+                <li><a href="/banoqabil/signup.html" class="login-btn">Sign-Up</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+        <div class="text">
+
+        </div>
+    </section>
+
+
+    <section id="courses">
+        <h2>Our Top Courses</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg"
+                    alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS, and JS to build modern websites.</p>
+            </div>
+            <div class="course-card">
+                <img src="./images/graphic.jpg" alt="Graphic Design">
+                <h3>Graphic Design</h3>
+                <p>Master Photoshop and Illustrator to create stunning visuals.</p>
+            </div>
+            <div class="course-card">
+                <img src="./images/registration.jpg" alt="Digital Marketing">
+                <h3>Digital Marketing</h3>
+                <p>Grow businesses using SEO and Social Media strategies.</p>
+            </div>
+        </div>
+        <a href="/banoqabil/courses.html" class="btn">View More Courses</a>
+    </section>
+
+    <section class="gallery">
+        <h2 class="section-title">Gallery</h2>
+
+        <div class="gallery-container">
+            <img src="./images/pic5.jpg" alt="">
+            <img src="./images/pic4.jpg" alt="">
+            <img src="./images/pic1.jpg" alt="">
+            <img src="./images/gallery14.jpeg" alt="">
+        </div>
+
+        <a href="/banoqabil/gallerey.html" class="btn">View More</a>
+    </section>
+    <section class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p><strong>Phone:</strong> +92 335 0800911</p>
+                <br>
+                <p><strong>Email:</strong> banoqabilsahiwal@gmail.com </p>
+                <br>
+                <p><strong>Location:</strong> Fateh sher road,Sahiwal,Pakistan</p>
+
+            </div>
+
+            <!-- Google Map -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.400460596722!2d73.1074139742631!3d30.679006888229523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c18b486015cd55%3A0x267a3d9f176cca4!2sBano%20Qabil%20Sahiwal!5e0!3m2!1sen!2s!4v1765025808671!5m2!1sen!2s">
+            </iframe>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Company Section -->
+            <div class="footer-section">
+                <div class="logo">
+                    <img src="./images/logo-removebg-preview.png">
+                    <div class="logo"> </div>
+
+                </div>
+                <h3>Bano Qabil</h3>
+                <p>Learn, grow, and build your future.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/banoqabil/index.html">Home</a></li>
+                    <br>
+                    <li><a href="/banoqabil/courses.html">Courses</a></li>
+                    <br>
+                    <li><a href="/banoqabil/contactus.html">Campus</a></li>
+                    <br>
+                    <li><a href="/banoqabil/gallerey.html">Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Courses -->
+            <div class="footer-section">
+                <h4>Top Courses</h4>
+                <ul>
+                    <li><a href="/courses/web development.html">Web Development</a></li>
+                    <br>
+                    <li><a href="/courses/graphic.html">Graphic Designing</a></li>
+                    <br>
+                    <li><a href="/courses/digitalmarketing.html">Digital Marketing</a></li>
+                    <br>
+                    <li><a href="/courses/cyb.html">Cyber Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+
+                <p>Email: banoqabilsahiwal@gmail.com </p>
+                <p>Phone: +92 335 0800911 </p>
+                <p>Location: Fateh sher road,Sahiwal,Pakistan</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Bano Qabil | All rights reserved.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
